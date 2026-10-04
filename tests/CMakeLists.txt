@@ -9,11 +9,17 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(rayforge_tests
     test_main.cpp
+    test_vec3.cpp
 )
 
 target_link_libraries(rayforge_tests
     PRIVATE
     GTest::gtest_main
+)
+
+target_include_directories(rayforge_tests
+    PRIVATE
+    ${CMAKE_SOURCE_DIR}/src
 )
 
 include(GoogleTest)
