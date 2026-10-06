@@ -11,6 +11,7 @@ add_executable(rayforge_tests
     test_main.cpp
     test_vec3.cpp
     test_ray.cpp
+    test_sphere.cpp
 )
 
 target_link_libraries(rayforge_tests
