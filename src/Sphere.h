@@ -4,14 +4,15 @@
 #include <cmath>
 
 #include "Ray.h"
+#include "Hittable.h"
 
 
-class Sphere {
+class Sphere : public Hittable {
 public:
     explicit Sphere(double radius)
         : radius_(radius) {}
 
-    bool intersects(const Ray& ray) const {
+    bool intersects(const Ray& ray) const override {
         Vec3 oc = ray.origin();
 
         double a = ray.direction().lengthSquared();
