@@ -13,6 +13,7 @@ add_executable(rayforge_tests
     test_ray.cpp
     test_sphere.cpp
     test_hittable.cpp
+    test_scene.cpp
 )
 
 target_link_libraries(rayforge_tests
